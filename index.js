@@ -57,7 +57,7 @@ module.exports = function soapRequest(opts = {
         reject(error.response.data);
       } else {
         console.error(`SOAP FAIL: ${error}`);
-        reject(error);
+        reject(error.response.data);
       }
     });
   });
